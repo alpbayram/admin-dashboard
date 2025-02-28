@@ -1,0 +1,115 @@
+@font-face {
+	font-family: "Inter";
+	src: local("Inter"), local("Inter Regular"), url("../fonts/Inter-R.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: optional;
+}
+
+@font-face {
+	font-family: "Inter";
+	src: local("Inter Bold"), url("../fonts/Inter-B.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+	font-display: optional;
+}
+
+@font-face {
+	font-family: "Inter";
+	src: local("Inter Italic"), url("../fonts/Inter-I.woff2") format("woff2");
+	font-weight: 400;
+	font-style: italic;
+	font-display: optional;
+}
+@font-face {
+	font-family: "Inter";
+	src: local("Inter Bold Italic"), url("../fonts/Inter-BI.woff2") format("woff2");
+	font-weight: 700;
+	font-style: italic;
+	font-display: optional;
+}
+@font-face {
+	font-family: "Inter-fallback-linux";
+	src: local("Liberation Sans");
+}
+@font-face {
+	font-family: "Inter-fallback";
+	src: local("Arial");
+}
+@font-face {
+	font-family: "Norse";
+	src: url("../fonts/Norse-R.woff2");
+	font-weight: normal;
+	font-style: normal;
+	font-display: optional;
+}
+@font-face {
+	font-family: "Norse";
+	src: url("../fonts/Norse-B.woff2");
+	font-weight: bold;
+	font-style: normal;
+	font-display: optionalgit a;
+}
+img {
+	block-size: auto;
+	height: auto;
+	max-width: 100%;
+	width: 100%;
+	min-width: 0;
+	object-fit: cover;
+}
+
+* {
+	 outline: 1px solid black;  
+}
+
+body {
+	
+	min-height: 100vh;
+}
+.container{
+	min-height: 100vh;
+	display: grid;
+	grid-template-columns: 200px 1fr 200px;
+	grid-template-rows: 200px 1fr 1fr;
+}
+
+.sidebar{
+	grid-column: 1;
+	grid-row: 1 / 4;
+	background-color: #1992d4;
+	color: white;
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto 1fr 1fr;
+	gap: 1em;
+	align-items: flex-start;
+
+}
+.sidebar-menu-1{
+	grid-row: 2 / 3;
+	display: grid;
+	grid-template-columns: 1fr;
+	
+}
+.sidebar-menu-2{
+	display: grid;
+	grid-row: 3 / 4;
+}
+.header{
+	grid-column: 2 / -1;
+	grid-row:1;
+}
+.projects-container{
+	grid-column: 2 /3;
+	grid-row: 2  / 4;
+}
+.announcements{
+	grid-column: 2 / 3;
+	grid-row: 2 / 3;
+}
+.trending{
+	grid-column:  3 / 4;
+	grid-row: 3 / 4;
+}
+
