@@ -432,8 +432,8 @@ button {
 .projects{
 	display: grid;
 	
-	grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
-	grid-auto-rows: 250px;
+	grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+	grid-auto-rows: 200px;
 	gap: var(--gap-main);
 	justify-content: center;
 }
