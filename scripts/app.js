@@ -14,8 +14,8 @@ function menuOpen() {
         sidebar.style.gridRow = "1/-1";
         
         sidebar.style.zIndex="3"
-        sidebar.style.width="14rem"
-        
+        sidebar.style.width="11rem"
+        iconX.style.display="flex"
         style = getComputedStyle(document.querySelector(".sidebar")).display;
 	}
 }

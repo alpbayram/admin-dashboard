@@ -67,16 +67,9 @@ body {
 	overflow: hidden; /* Sayfanın kaydırılmasını engeller */
 	height: 100%;
 }
-.icon-x {
-	display: none;
-}
-.icon-skeleton {
-	display: flex;
-	flex-grow: 1;
-	flex-basis: 30%;
-	justify-content: center;
-}
-@container sidebar (width < 160px) {
+
+
+@container sidebar (width < 150px) {
 	.sidebar-menu-1 .menu-item-wrapper,
 	.sidebar-menu-2 .menu-item-wrapper {
 		flex-wrap: wrap;
@@ -96,7 +89,7 @@ body {
 		gap: 0.25em;
 	}
 	.logo-item-text {
-		font-size: 1.1rem;
+		font-size: 1rem;
 	}
 }
 @container sidebar (width < 100px) {
@@ -151,7 +144,7 @@ body {
 		display: none;
 	}
 }
-@media (width < 1200px) {
+@media (width < 1100px) {
 	body .container {
 		grid-template-columns: 10vw 3fr 1fr;
 	}
@@ -181,9 +174,7 @@ body {
 	}
 	.icon-x {
 		display: flex;
-		flex-basis: min-content;
-		flex-shrink: 0;
-		height: 1.5em;
+		
 	}
 }
 /* bu denemedir */
@@ -193,7 +184,7 @@ body {
 		grid-template-rows: clamp(6rem, 9vw, 10rem) 1fr 1fr;
 	}
 	.container .sidebar {
-		gap: 4em;
+		gap: 3em;
 	}
 	.container .header {
 		grid-template-rows: 50% 50%;
@@ -219,7 +210,7 @@ body {
 	color: white;
 	display: grid;
 	grid-template-columns: auto;
-	grid-template-rows: 0.1fr 0.3fr 1fr;
+	grid-template-rows: auto auto 1fr;
 	gap: 2em;
 	align-items: start;
 	container-name: sidebar;
@@ -263,7 +254,7 @@ body {
 	padding-top: 1em;
 	width: 100%;
 	gap: 0.5em;
-	font-size: 1.3rem;
+	font-size: 1rem;
 }
 .menu-item-wrapper {
 	padding: 0.4em clamp(0.4rem, 5%, 1rem);
@@ -283,13 +274,13 @@ body {
 	flex-basis: 80%;
 }
 .icon {
-	flex-basis: min-content;
+	flex-basis: auto;
 	flex-shrink: 0;
 	height: 1.5em;
 	object-fit: contain;
 }
 .logo-icon {
-	flex-basis: min-content;
+	flex-basis: auto;
 	flex-shrink: 0;
 	height: 1.5em;
 	object-fit: contain;
@@ -301,7 +292,14 @@ body {
 	font-weight: bold;
 	overflow-wrap: normal;
 }
+.icon-x {
+	display: none;
+	flex-basis: auto;
+	flex-shrink: 0;
+	height: 1.5em;
 
+	object-fit: contain;
+}
 .header {
 	box-shadow: var(--shadow-elevation-medium);
 	container-name: header;
