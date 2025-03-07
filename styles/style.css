@@ -136,7 +136,7 @@ body {
 	}
 	
 }
-@container announcements (height < 300px) {
+@container announcements (height < 250px) {
 	.post:last-child{
 		display: none;
 	}
@@ -163,7 +163,7 @@ body {
 	}
 	
 }
-@media (width < 768px) {
+@media (width < 1000px) {
 	body .container {
 		grid-template-columns: max(3rem, 8vw) 3fr 1fr;
 		grid-template-rows: clamp(6rem, 9vw, 10rem) 1fr 1fr;
@@ -182,11 +182,11 @@ body {
 
 .container {
 	height: 100dvh;
-	
+	width: 100dvw;
 	min-width: 100vw;
 	display: grid;
-	grid-template-columns: min(14rem, 14vw)  3fr min(24rem, 20vw);
-	grid-template-rows: clamp(8rem, 9vw, 10rem) 1fr 1fr;
+	grid-template-columns: min(13rem, 14vw)  3fr min(20rem, 20vw);
+	grid-template-rows: clamp(7rem, 7vw, 9rem) 1fr 1fr;
 }
 
 .sidebar {
@@ -449,7 +449,7 @@ button {
 	display: flex;
 	flex-direction: column;
 	
-	font-size: 0.85rem;
+	font-size: 0.7rem;
 	color: #424242;
 	padding-right: clamp(0.5rem, 1.5vw, 3rem);
 	min-height: 0;
@@ -481,7 +481,7 @@ button {
 }
 .announcements-card-header,.trending-card-header{
 	font-weight: bold;
-	font-size: 0.9rem;
+	font-size: 0.8rem;
 	color: black;
 	
 }
