@@ -60,14 +60,13 @@ p {
 	min-width: min-content;
 }
 * {
-	/* outline: 1px solid black; */
+/* 	outline: 1px solid black; */
 }
 
 body {
-	overflow: hidden; /* Sayfanın kaydırılmasını engeller */
+	overflow: hidden; 
 	height: 100%;
 }
-
 
 @container sidebar (width < 150px) {
 	.sidebar-menu-1 .menu-item-wrapper,
@@ -174,7 +173,6 @@ body {
 	}
 	.icon-x {
 		display: flex;
-		
 	}
 }
 /* bu denemedir */
@@ -443,26 +441,30 @@ button {
 .projects-container {
 	background-color: #e2e8f0;
 	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: auto 1fr;
-	padding-top: 2rem;
-	gap: clamp(0.5rem, 0.5vw, 1rem);
+
+	grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+	grid-template-rows: auto;
+	grid-auto-rows: 14rem;
+	padding-top: 1rem;
+	gap: clamp(0.5rem, 5vw, 1.5rem);
 	z-index: 1;
 	padding-left: clamp(0.5rem, 1.5vw, 3rem);
-	padding-bottom: 2rem;
+	overflow: scroll;
 	padding-right: clamp(0.5rem, 1.5vw, 3rem);
+	font-size: 0.9rem;
+	color: #424242;
+	padding-bottom: 2rem;
+	min-height: 0;
 }
 .projects {
-	display: grid;
-
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	grid-auto-rows: 200px;
-	gap: var(--gap-main);
+	
+	gap: clamp(0.5rem, 5vw, 1rem);
 	justify-content: center;
+	background-color: #e2e8f0;
+	overflow: scroll;
+	
 }
-.card {
-	border: 1px solid black;
-}
+
 .announcements {
 	padding-top: 2rem;
 	padding-bottom: 1rem;
@@ -511,8 +513,58 @@ button {
 }
 .announcements-card-text {
 	min-height: 0;
+	overflow: clip;
 }
 .trending {
 	padding-bottom: 2rem;
 	padding-top: 1rem;
+}
+.card {
+	background-color: white;
+	border-left: 0.55rem solid orange;
+	display: flex;
+	flex-direction: column;
+	border-radius: 0.5rem;
+	padding: 1rem clamp(1rem, 1vw, 3rem);
+	flex-grow: 1;
+	justify-content: space-around;
+	box-shadow: var(--shadow-elevation-medium);
+	container-name: announcements;
+	container-type: size;
+	min-height: 0;
+	z-index: 1;
+}
+.card-text-container {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 80%;
+
+	justify-content: center;
+	flex-grow: 1;
+	min-height: 0;
+}
+.card-icons {
+	flex-shrink: 1;
+	flex-basis: 20%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	gap: clamp(1.5rem, 1vw, 1.5rem);
+}
+.card-header {
+	font-weight: bold;
+	font-size: 1rem;
+	color: black;
+}
+.card-text {
+	min-height: 0;
+	text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+.card-icon{
+	align-self: flex-end;
+	height: 2em;
 }
