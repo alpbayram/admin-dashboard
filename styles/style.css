@@ -443,7 +443,7 @@ button {
 	display: grid;
 
 	grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-	grid-template-rows: auto;
+	grid-template-rows: 1.95rem;
 	grid-auto-rows: 14rem;
 	padding-top: 1rem;
 	gap: clamp(0.5rem, 5vw, 1.5rem);
@@ -455,6 +455,10 @@ button {
 	color: #424242;
 	padding-bottom: 2rem;
 	min-height: 0;
+}
+.projects-container .label{
+	grid-column: 1 / -1;
+	grid-row: 1/2;
 }
 .projects {
 	
